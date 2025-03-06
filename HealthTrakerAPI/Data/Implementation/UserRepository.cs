@@ -1,9 +1,10 @@
-﻿using HealthTrakerAPI.Models;
+﻿using HealthTrakerAPI.Data.Contract;
+using HealthTrakerAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HealthTrakerAPI.Data.Implementation
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly HealthTrackerContext _context;
 
@@ -12,7 +13,7 @@ namespace HealthTrakerAPI.Data.Implementation
             _context = context;
         }
 
-        public async Task<IEnumerable<User>> GetUsersAsync()
+        public async Task<IEnumerable<User>> GetAllUsersAsync()
         {
             return await _context.Users.ToListAsync();
         }

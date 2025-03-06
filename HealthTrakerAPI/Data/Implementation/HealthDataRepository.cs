@@ -1,9 +1,10 @@
-﻿using HealthTrakerAPI.Models;
+﻿using HealthTrakerAPI.Data.Contract;
+using HealthTrakerAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HealthTrakerAPI.Data.Implementation
 {
-    public class HealthDataRepository
+    public class HealthDataRepository : IHealthDataRepository
     {
         private readonly HealthTrackerContext _context;
 

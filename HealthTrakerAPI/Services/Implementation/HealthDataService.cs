@@ -137,7 +137,7 @@ namespace HealthTrakerAPI.Services.Implementation
 
                 if (healthData == null)
                 {
-                    response.Message = "Health data not found.";
+                    response.Message = "Health data not found in updatehealthdata.";
                     response.Success = false;
                     return response;
                 }

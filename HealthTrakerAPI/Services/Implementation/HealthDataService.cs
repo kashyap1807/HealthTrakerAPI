@@ -116,7 +116,7 @@ namespace HealthTrakerAPI.Services.Implementation
                     SleepDuration = healthData.SleepDuration,
                     Date = healthData.Date
                 };
-                response.Message = "Health Data added Successfully!";
+                response.Message = "Health Data added Successfully! Hurrey!!!";
                 response.Success = true;
             }
             catch (Exception ex)
